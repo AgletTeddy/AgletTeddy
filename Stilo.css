@@ -1,0 +1,431 @@
+/*
+    Nome: Eduardo Clemente
+        Numero: 3200840
+        Nome do exercício: Portfólio
+        Ano Letivo: 2023/2024
+        Curso: DGM
+        UC: Lab de Projeto II
+
+        ESAD.CR
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Futura Medium;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Futura Book;
+    src: url(assets/Futura\ Book\ font.ttf);
+}
+
+@font-face {
+    font-family: Futura Book;
+    src: url(assets/Futura\ Book\ Italic\ font.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Futura Medium;
+    src: url(assets/futura\ medium\ bt.ttf);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: calc(100vw - 30px);
+    height: 100vh;
+    background-image: url(Imagens/Eduardo1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    width: calc(100vw - 17px);
+    height: 7rem;
+    padding: 10px 10%;
+}
+
+.container {
+    height: 100%;
+    padding: 10px 10%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3.2rem;
+    width: 100%;
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo{
+    width: 200px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+/*
+Links
+*/
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+/* 
+Links animação
+*/
+
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #7f4d5d;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+
+
+.header-text{
+    margin: 20% 0;
+    font-size: 30px;
+}
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span{
+    color: #7f4d5d;
+}
+
+/* 
+About
+*/
+
+#about{
+    display: flex;
+    margin: 18rem 0 0;
+    color: #080808;
+}
+
+.about-section{    
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.about-col-1{
+    flex-basis: 35%;
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+
+.subtitle-about{
+    font-size: 60px;
+    font-weight: 600;
+    color: #000000;
+    margin-top: 3rem;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+/*
+About animação 
+*/
+
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #7f4d5d;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 100%;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #7f4d5d;
+    font-size: 14px;
+}
+
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+/* 
+Portfolio 
+*/
+
+#portfolio{
+    padding: 1rem 10%;
+    display: flex;
+    background-color: #7f4d5d;
+    width: calc(100vw - 17px);
+    flex-direction: column;
+}
+
+.portfolio-section h1{
+    font-size: 60px;
+}
+
+.portfolio-header {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0rem 0rem 0rem;
+} 
+
+.portfolio-header-image {
+    display: flex; 
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1.8rem;
+    height: 60%;
+    box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.37);
+    text-decoration: none;
+    min-width: auto;
+    max-height: 35%;
+}
+
+.portfolio-header-image h2{
+    color: #7f4d5d;
+}
+
+.vid-container {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 2em;
+}
+.vid-container a img {
+    width: 100%;
+    aspect-ratio: 9/16;
+    box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.490);
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.vid-container a{
+    opacity: 80%;
+}
+
+/*
+Portfolio Animação
+*/
+
+.portfolio-header-image:hover {
+    background-color: rgb(243, 243, 243);
+    transition: 0,5s;
+}
+
+.vid-container a:hover{
+    opacity: 100%;
+    transition: 0,5s;
+}
+
+.vid-container img:hover{
+    box-shadow: 0px 0px 26px rgba(255, 255, 255, 0.767);
+}
+
+/*
+Contact
+*/
+
+#contact{
+    padding: 1rem 12rem;
+    display: flex;
+    background-color: #080808;
+    width: calc(100vw - 17px);
+    align-items: center;
+}
+
+.row-contact{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+.contact-col-1{
+    flex-basis: 60%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+.contact-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 0px 26px rgba(255, 255, 255, 0.116);
+}
+
+.contact-col-2{
+    flex-basis: 35%;
+}
+
+.subtitle-contact{
+    font-size: 80px;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 3rem;
+}
+
+/*
+Portfolio links
+*/
+
+.portfolio-x p {
+    font-size: 20px;
+}
+
+iframe{
+    border: none;
+    width: 100%;
+    aspect-ratio: 9/16;
+    box-shadow: 0px 0px 26px rgba(0, 0, 0, 0.490);
+    border-radius: 10px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.explanation{
+    padding: auto;
+    margin: auto;
+    width: 50rem;
+}
+
+/* media queries */
+/* media query para 1320px largura */
+@media screen and (max-width: 1359px){
+    .about-col-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header-text{
+        width: 60%;
+    }
+    .vid-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* media query para telemóvel/janela pequena */
+@media screen and (max-width: 850px){
+    #header{
+        height: 10rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .row{
+        flex-direction: column; 
+        gap: 0;
+    }
+
+    .about-section{
+        width: 100%;
+    }
+
+    .about-col-2{
+        text-align: center;
+    }
+
+    .row-contact{
+        flex-direction: column; 
+        gap: 0;
+    }
+
+    .contact-section{
+        width: 100%;
+    }
+
+    .contact-col-2{
+        text-align: center;
+    }
+    
+    nav{
+        height: 8rem;
+    }
+    
+    nav ul li{
+        display: block;
+    }
+    
+    .portfolio-header {
+        flex-direction: column;
+        gap: 0;
+    } 
+}
+
+/* media query para telemóvel/janela pequena */
+@media screen and (max-width: 700px){
+    .about-col-1 img{
+        transform: scale(0.8);
+    }
+    .vid-container {
+        grid-template-columns: auto;
+    }
+}
